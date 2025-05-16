@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "title": "Remera Nike",
+    "description": "Remera deportiva",
+    "code": "pgm232",
+    "price": 250,
+    "status": true,
+    "stock": 10,
+    "category": "remeras",
+    "thumbnail": ""
+  },
+  {
+    "id": 2,
+    "title": "Pantalón Adidas",
+    "description": "Pantalón deportivo",
+    "code": "pgm233",
+    "price": 300,
+    "status": true,
+    "stock": 15,
+    "category": "pantalones",
+    "thumbnail": ""
+  },
+  {
+    "id": 3,
+    "title": "Zapatillas Puma",
+    "description": "Zapatillas de running",
+    "code": "pgm234",
+    "price": 500,
+    "status": true,
+    "stock": 20,
+    "category": "zapatillas",
+    "thumbnail": ""
+  },
+  {
+    "id": 4,
+    "title": "Campera Under Armour",
+    "description": "Campera impermeable",
+    "code": "pgm235",
+    "price": 600,
+    "status": true,
+    "stock": 5,
+    "category": "camperas",
+    "thumbnail": ""
+  },
+  {
+    "id": 5,
+    "title": "Gorra Reebok",
+    "description": "Gorra deportiva",
+    "code": "pgm236",
+    "price": 100,
+    "status": true,
+    "stock": 25,
+    "category": "gorras",
+    "thumbnail": ""
+  },
+  {
+    "id": 6,
+    "title": "Buzo",
+    "description": "buzo polar",
+    "code": "Glm211",
+    "price": 5000,
+    "stock": 2,
+    "category": "buzos",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 7,
+    "title": "Gorra",
+    "description": "gorra de verano",
+    "code": "Tm2121",
+    "price": 2000,
+    "stock": 5,
+    "category": "gorras",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 8,
+    "title": "Bufanda",
+    "description": "bufanda de invierno",
+    "code": "as212",
+    "price": 3422,
+    "stock": 12,
+    "category": "bufanda",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 9,
+    "title": "Bufanda",
+    "description": "bufanda de invierno",
+    "code": "as212",
+    "price": 3422,
+    "stock": 12,
+    "category": "bufanda",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 10,
+    "title": "Guantes de Arquero",
+    "description": "Para atajar penales",
+    "code": "sdfsdf",
+    "price": "5877",
+    "stock": "45",
+    "category": "Guantes",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 11,
+    "title": "silbato",
+    "description": "pito",
+    "code": "456789",
+    "price": "5555",
+    "stock": "1111",
+    "category": "SILBATO",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 12,
+    "title": "rodilleras",
+    "description": "para las rodillas",
+    "code": "456789",
+    "price": "777",
+    "stock": "888",
+    "category": "rodilleras",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 13,
+    "title": "canilleras",
+    "description": "para las canillas",
+    "code": "65477",
+    "price": "1234",
+    "stock": "4321",
+    "category": "canilleras",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 14,
+    "title": "culeras",
+    "description": "para el culo",
+    "code": "111",
+    "price": "2222",
+    "stock": "3333",
+    "category": "culeras",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 15,
+    "title": "pera",
+    "description": "para la pera",
+    "code": "456",
+    "price": "44",
+    "stock": "55",
+    "category": "perales",
+    "status": true,
+    "thumbnail": ""
+  },
+  {
+    "id": 16,
+    "title": "gargantilla",
+    "description": "para la garganta",
+    "code": "234",
+    "price": "33",
+    "stock": "33",
+    "category": "gargantillas finas",
+    "status": true,
+    "thumbnail": ""
+  }
+]

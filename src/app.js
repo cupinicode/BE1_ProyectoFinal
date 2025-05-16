@@ -1,25 +1,52 @@
 import express from "express";
-import connectMongoDB from "./config/db.js"; // Importamos la conexión que pasamos a un archivo aparte
 import productsRouter from "./routes/products.router.js";
-import dotenv from "dotenv"; // Import dotenv to load environment variables
-
-// Inicializamos las variables de entorno
-dotenv.config(); // Load environment variables from .env file   
+import cartRouter from "./routes/cart.router.js";
+import viewsRouter from "./routes/views.router.js";
+import { engine } from "express-handlebars";
+import { Server } from "socket.io";
+import http from "http";
+import ProductManager from "./ProductManager.js";
+import connectMongoDB from "./config/db.js";
 
 const app = express();
-const PORT = process.env.PORT || 8080; // Use the port from environment variables or default to 8080
+const server = http.createServer(app);
+const io = new Server(server);
 
-app.use(express.json()); // Middleware to parse JSON request bodies
-app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded request bodies
+//handlebars
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./src/views");
 
+//puerto de nuestro servidor
+const PORT = 8080;
+//habilitamos poder recibir json
+app.use(express.json());
+//habilitamos la carpeta public
+app.use(express.static("public"));
 
 connectMongoDB();
 
 //endpoints
+app.use("/api/products", productsRouter);
+app.use("/api/carts", cartRouter);
+app.use("/", viewsRouter);
 
-app.use("/api/products", productsRouter); // Use the products router for /api/products endpoint
-app.use(express.json()); // Middleware to parse JSON request bodies
+//websockets
+const productManager = new ProductManager();
+io.on("connection", (socket)=> {
+  console.log("Nuevo usuario conectado");
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  socket.on("newProduct", async(productData)=> {
+    try {
+      const newProduct = await productManager.addProduct(productData);
+
+      io.emit("productAdded", newProduct);
+    } catch (error) {
+      console.error("Error al añadir el producto");
+    }
+  });
+
 });
+
+//iniciamos el servidor y escuchamos en el puerto definido
+server.listen(PORT, ()=> console.log(`Servidor iniciado en: http://localhost:${PORT}`) );

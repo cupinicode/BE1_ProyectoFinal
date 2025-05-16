@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Sacapuntas",
+    "price": 50,
+    "otra_propiedad": "valor2"
+  },
+  {
+    "id": 2,
+    "name": "Lapiz Negro",
+    "price": 224,
+    "otra_propiedad": "valor2"
+  },
+  {
+    "id": 3,
+    "name": "Regla 20cm",
+    "price": 224,
+    "otra_propiedad": "valor2"
+  },
+  {
+    "id": 4,
+    "title": "uiouio",
+    "description": "uiouio",
+    "code": "uiouio",
+    "price": "7777",
+    "stock": "777",
+    "category": "uiouio",
+    "status": true,
+    "thumbnail": ""
+  }
+]
